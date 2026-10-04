@@ -1,0 +1,22 @@
+{
+  "name": "codetist-debugger-starter",
+  "displayName": "Codetist DAP Starter",
+  "description": "A TypeScript Debug Adapter Protocol extension starter for Codetist.",
+  "version": "1.0.0",
+  "webview": {
+    "entry": "webview/index.html"
+  },
+  "contributes": {
+    "debuggers": [
+      {
+        "type": "codetist-sample",
+        "label": "Codetist DAP Sample",
+        "languages": ["typescript", "javascript"],
+        "adapter": {
+          "command": "node",
+          "args": ["${extensionPath}/dist/adapter.js"]
+        }
+      }
+    ]
+  }
+}
